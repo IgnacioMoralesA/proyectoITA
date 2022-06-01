@@ -5,9 +5,7 @@ import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal extends Ventana {
     private JLabel bienvenida;
-    private JButton botonRegistro;
-    private JButton botonLogin;
-    private JButton botonSalida;
+    private JButton botonRegistro,botonLogin,botonSalida;
 
     public VentanaPrincipal() {
 

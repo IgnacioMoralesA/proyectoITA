@@ -1,12 +1,11 @@
 package GUIs;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 public class VentanaProfesor extends Ventana {
     private JLabel bienvenida;
-    private JButton botonRegistro;
-    private JButton botonLogin;
-    private JButton botonSalida;
+    private JButton botonRegistro,botonLogin,botonSalida;
 
 
     public VentanaProfesor() {
@@ -53,6 +52,24 @@ public class VentanaProfesor extends Ventana {
         this.botonSalida = super.generarBoton(textoBoton, 190, 350, 200, 80);
         this.add(this.botonSalida);
         this.botonSalida.addActionListener(this);
+    }
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == this.botonRegistro) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+
+        }
+        if (e.getSource() == this.botonLogin) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+
+
+
+        }
+        if (e.getSource() == this.botonSalida) {
+            this.dispose();
+            System.exit(0);
+        }
     }
 
 }

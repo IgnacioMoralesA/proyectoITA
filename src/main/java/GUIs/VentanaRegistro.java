@@ -8,9 +8,7 @@ import java.awt.event.ActionEvent;
 
 public class VentanaRegistro extends Ventana {
     private JLabel labelRegistro;
-    private JButton botonRegistrar;
-    private JButton botonReset;
-    private JButton botonVolver;
+    private JButton botonRegistrar,botonReset,botonVolver;
     private JTextField userInputPanel;
     private JPasswordField passInputPanel;
     private JPasswordField passConfirmationInputPanel;

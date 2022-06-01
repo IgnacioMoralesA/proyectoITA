@@ -1,19 +1,11 @@
 package GUIs;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 
-public class VentanaEstudiante extends Ventana{
+public class VentanaEstudiante extends Ventana {
     private JLabel bienvenida;
-    private JButton LeccionX1;
-    private JButton LeccionX2;
-    private JButton LeccionY1;
-    private JButton LeccionY2;
-    private JButton LeccionZ1;
-    private JButton LeccionZ2;
-    private JButton botonSalida;
-
-
-
+    private JButton LeccionX1,LeccionX2,LeccionY1,LeccionY2,LeccionZ1,LeccionZ2,botonSalida;
 
 
     public VentanaEstudiante() {
@@ -66,28 +58,73 @@ public class VentanaEstudiante extends Ventana{
         this.add(this.LeccionY1);
         this.LeccionY1.addActionListener(this);
     }
+
     public void generarBotonLeccionY2() {
         String textoBoton = "LeccionY2";
         this.LeccionY2 = super.generarBoton(textoBoton, 150, 390, 300, 60);
         this.add(this.LeccionY2);
         this.LeccionY2.addActionListener(this);
     }
+
     public void generarBotonLeccionZ1() {
         String textoBoton = "LeccionZ1";
         this.LeccionZ1 = super.generarBoton(textoBoton, 150, 470, 300, 60);
         this.add(this.LeccionZ1);
         this.LeccionX2.addActionListener(this);
     }
+
     public void generarBotonLeccionZ2() {
         String textoBoton = "LeccionZ2";
         this.LeccionZ2 = super.generarBoton(textoBoton, 150, 550, 300, 0);
         this.add(this.LeccionZ2);
         this.LeccionX2.addActionListener(this);
     }
+
     public void generarBotonSalida() {
         String textoBoton = "Salir";
         this.botonSalida = super.generarBoton(textoBoton, 200, 600, 200, 80);
         this.add(this.botonSalida);
         this.LeccionX2.addActionListener(this);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == this.LeccionX1) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+
+        }
+        if (e.getSource() == this.LeccionX2) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+
+
+        }
+        if (e.getSource() == this.LeccionY1) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+
+        }
+        if (e.getSource() == this.LeccionY2) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+            if (e.getSource() == this.botonSalida) {
+                this.dispose();
+                System.exit(0);
+            }
+        }
+        if (e.getSource() == this.LeccionZ1) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+
+        }
+        if (e.getSource() == this.LeccionZ2) {
+            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            this.dispose();
+        }
+        if(e.getSource() == this.botonSalida){
+            this.dispose();
+            System.exit(0);
+        }
+
     }
 }

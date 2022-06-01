@@ -8,9 +8,7 @@ import java.awt.event.ActionEvent;
 
 public class VentanaLogin extends Ventana {
     private JLabel labelLoguear;
-    private JButton botonLogear;
-    private JButton botonReset;
-    private JButton botonVolver;
+    private JButton botonLogear,botonReset,botonVolver;
     private JTextField userInputPanel;
     private JPasswordField passInputPanel;
 
