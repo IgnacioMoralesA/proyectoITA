@@ -1,6 +1,7 @@
 package GUIs;
 
-import User.Login;
+
+import User.LoginProfesor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,6 +27,7 @@ public class VentanaRegistro extends Ventana {
         generarBotonReset();
         generarBotonVolver();
         generarInputPanels();
+
     }
 
 
@@ -94,9 +96,9 @@ public class VentanaRegistro extends Ventana {
     public void registrarUsuario(String user, String pass, String confirmation) {
         if (!user.isEmpty() && !pass.isEmpty()) {
             if (pass.equalsIgnoreCase(confirmation)) {
-                Login login = new Login(user, pass);
-                if(!login.registroCheck("src\\main\\resources\\registro")) {
-                    login.registrarUsuario();
+                LoginProfesor loginProfesor= new LoginProfesor(user, pass);
+                if(!loginProfesor.registroCheck("src\\main\\resources\\registroProfesores")) {
+                    loginProfesor.registrarUsuario();
                     JOptionPane.showMessageDialog(this, "Registro exitoso.");
                     this.dispose();
                 }

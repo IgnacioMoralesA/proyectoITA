@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class VentanaProfesor extends Ventana {
+    private String curso;
     private JLabel bienvenida;
     private JButton botonRegistro,botonLogin,botonSalida;
 
@@ -55,12 +56,22 @@ public class VentanaProfesor extends Ventana {
     }
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.botonRegistro) {
-            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            curso=JOptionPane.showInputDialog("Ingrese nombre del nuevo curso:");
+
+            while(curso.isEmpty()){
+                curso=JOptionPane.showInputDialog("Ingrese nombre del nuevo curso:");
+                JOptionPane.showMessageDialog(null, "No puede dejar este valor en blanco ");
+
+            }
             this.dispose();
 
+
+
+
         }
+
         if (e.getSource() == this.botonLogin) {
-            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            curso=JOptionPane.showInputDialog("Ingrese nombre del nuevo curso:");
             this.dispose();
 
 

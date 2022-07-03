@@ -5,19 +5,19 @@ import data.FileReader;
 
 import java.util.ArrayList;
 
-public class Login {
+public class LoginEstudiante {
     private String user;
     private String pass;
     private boolean loginState = false;
 
-    public Login(String user, String pass) {
+    public LoginEstudiante(String user, String pass) {
         this.user = user;
         this.pass = pass;
     }
 
     public void registrarUsuario() {
-        int newId = FileReader.leerArchivo("src\\main\\resources\\registro").size() + 1;
-        DataUpdater.guardarUsuario(this.user, this.pass, "src\\main\\resources\\registro", newId);
+        int newId = FileReader.leerArchivo("src\\main\\resources\\registroEstudiantes").size() + 1;
+        DataUpdater.guardarUsuario(this.user, this.pass, "src\\main\\resources\\registroEstudiantes", newId);
     }
 
     public String[] logearUsuario(String filepath) {
