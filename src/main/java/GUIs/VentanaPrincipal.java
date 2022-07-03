@@ -52,9 +52,7 @@ public class VentanaPrincipal extends Ventana {
         if(e.getSource() == this.botonRegistro){
             VentanaRegistro registro= new VentanaRegistro();
             this.dispose();
-
         }
-
         if(e.getSource() == this.botonLogin){
             VentanaLogin login= new VentanaLogin();
             this.dispose();

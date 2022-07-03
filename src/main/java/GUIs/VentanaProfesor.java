@@ -1,16 +1,20 @@
 package GUIs;
 
+import model.Curso;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class VentanaProfesor extends Ventana {
+    private String nombreCurso;
     private JLabel bienvenida;
     private JButton botonRegistro,botonLogin,botonSalida;
+    private Curso curso;
 
 
     public VentanaProfesor() {
 
-        super("VentanaProfesor", 600, 600);
+        super("Ventana Profesor", 600, 600);
         generarElementosVentana();
 
     }
@@ -55,12 +59,21 @@ public class VentanaProfesor extends Ventana {
     }
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.botonRegistro) {
-            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            nombreCurso =JOptionPane.showInputDialog("Ingrese nombre del nuevo curso:");
+            this.curso = new Curso(nombreCurso);
+            VentanaPestañaCurso ventanaPestañaCurso = new VentanaPestañaCurso(curso);
+
+            while(nombreCurso.isEmpty()){
+                nombreCurso =JOptionPane.showInputDialog("Ingrese nombre del nuevo curso:");
+                JOptionPane.showMessageDialog(null, "No puede dejar este valor en blanco ");
+
+            }
             this.dispose();
 
         }
+
         if (e.getSource() == this.botonLogin) {
-            JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
+            nombreCurso = JOptionPane.showInputDialog("Ingrese nombre del nuevo curso:");
             this.dispose();
 
 

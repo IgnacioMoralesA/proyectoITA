@@ -1,6 +1,7 @@
 package GUIs;
 
-import User.Login;
+import User.LoginEstudiante;
+import User.LoginProfesor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -58,12 +59,11 @@ public class VentanaLogin extends Ventana {
         this.botonVolver.addActionListener(this);
     }
 
-
-    public void generarInputPanels() {
+    public void generarInputPanels()    {
         JLabel labelUser = new JLabel("Usuario: ");
         labelUser.setBounds(100, 150, 200, 40);
         labelUser.setForeground(Color.BLACK);
-        userInputPanel = new JTextField();
+        this.userInputPanel = new JTextField();
         userInputPanel.setBounds(200, 150, 200, 40);
         super.add(userInputPanel);
         super.add(labelUser);
@@ -76,12 +76,13 @@ public class VentanaLogin extends Ventana {
         super.add(passInputPanel);
         super.add(labelPass);
     }
+
     public void actionPerformed(ActionEvent e) {
         boolean state;
         if(e.getSource() == this.botonLogear) {
-            Login login = new Login(userInputPanel.getText(), String.valueOf(passInputPanel.getPassword()));
-            login.logearUsuario("src\\main\\resources\\registro");
-            state = login.isLoginState();
+            LoginProfesor loginProfesor = new LoginProfesor(userInputPanel.getText(), String.valueOf(passInputPanel.getPassword()));
+            loginProfesor.logearUsuario();
+            state = loginProfesor.isLoginState();
             if (!state) {
                 JOptionPane.showMessageDialog(this, "Login incorrecto, intente nuevamente.");
                 userInputPanel.setText("");

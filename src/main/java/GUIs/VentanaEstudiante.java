@@ -70,19 +70,19 @@ public class VentanaEstudiante extends Ventana {
         String textoBoton = "LeccionZ1";
         this.LeccionZ1 = super.generarBoton(textoBoton, 150, 470, 300, 60);
         this.add(this.LeccionZ1);
-        this.LeccionX2.addActionListener(this);
+        this.LeccionZ1.addActionListener(this);
     }
 
     public void generarBotonLeccionZ2() {
         String textoBoton = "LeccionZ2";
-        this.LeccionZ2 = super.generarBoton(textoBoton, 150, 550, 300, 0);
+        this.LeccionZ2 = super.generarBoton(textoBoton, 150, 550, 300, 60);
         this.add(this.LeccionZ2);
-        this.LeccionX2.addActionListener(this);
+        this.LeccionZ2.addActionListener(this);
     }
 
     public void generarBotonSalida() {
         String textoBoton = "Salir";
-        this.botonSalida = super.generarBoton(textoBoton, 200, 600, 200, 80);
+        this.botonSalida = super.generarBoton(textoBoton, 200, 650, 200, 80);
         this.add(this.botonSalida);
         this.LeccionX2.addActionListener(this);
     }
@@ -90,36 +90,32 @@ public class VentanaEstudiante extends Ventana {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.LeccionX1) {
             JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
-            this.dispose();
+
 
         }
         if (e.getSource() == this.LeccionX2) {
             JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
-            this.dispose();
+
 
 
         }
         if (e.getSource() == this.LeccionY1) {
             JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
-            this.dispose();
+
 
         }
         if (e.getSource() == this.LeccionY2) {
             JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
-            this.dispose();
-            if (e.getSource() == this.botonSalida) {
-                this.dispose();
-                System.exit(0);
-            }
+
         }
         if (e.getSource() == this.LeccionZ1) {
             JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
-            this.dispose();
+
 
         }
         if (e.getSource() == this.LeccionZ2) {
             JOptionPane.showMessageDialog(this, "Esta opcion esta siendo trabajada para un proximo avance.");
-            this.dispose();
+
         }
         if(e.getSource() == this.botonSalida){
             this.dispose();
