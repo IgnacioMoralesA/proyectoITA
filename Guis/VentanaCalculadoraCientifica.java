@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class VentanaCalculadoraCientifica extends Ventana {
     private final JButton[] botonesNumeros = new JButton[10];
     private final ArrayList<JButton> botonesFunciones = new ArrayList<>();
@@ -206,6 +209,11 @@ public class VentanaCalculadoraCientifica extends Ventana {
                 operador = '|';
                 this.textoCalculadora.setText("");
             }
+            if(e.getSource()==botoncbrt){
+                num1=Double.parseDouble(this.textoCalculadora.getText());
+                operador = '∛';
+                this.textoCalculadora.setText("");
+            }
             if(e.getSource()==botonResultado) {
                 double num2 = Double.parseDouble(this.textoCalculadora.getText());
 
@@ -229,6 +237,7 @@ public class VentanaCalculadoraCientifica extends Ventana {
                     case 't' -> resultado = CalculadoraCientifica.tangente(num1);
                     case 'Σ' -> resultado = CalculadoraCientifica.sumatoria(num1);
                     case '|' -> resultado = CalculadoraCientifica.valorAbsoluto(num1);
+                    case '∛' -> resultado = CalculadoraCientifica.cbrt(num1);
                 }
                 num1 = resultado;
                 this.textoCalculadora.setText(String.valueOf(resultado));
@@ -248,8 +257,11 @@ public class VentanaCalculadoraCientifica extends Ventana {
                     textoCalculadora.setText(textoCalculadora.getText()+string.charAt(i));
                 }
             }
-        }catch (Exception ex){
+        }catch (NumberFormatException ex){
             String error="ERROR!";
+            textoCalculadora.setText(error);
+        }catch (Exception e1){
+            String error="SYNTAX ERROR";
             textoCalculadora.setText(error);
         }
     }
