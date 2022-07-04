@@ -6,11 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="proyectoITA" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="proyectoITA" target="16" />
     </bytecodeTargetLevel>
+=======
+        <module name="I.T.A beta" />
+      </profile>
+    </annotationProcessing>
+>>>>>>> origin/German
   </component>
 </project>
