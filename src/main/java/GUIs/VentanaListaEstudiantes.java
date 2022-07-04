@@ -43,7 +43,6 @@ public class VentanaListaEstudiantes extends Ventana{
     }
     public void generar(){
         VentanaTabla dou= new VentanaTabla(new String[12][2],new String[2]);
-        dou.add(new VentanaListaEstudiantes());
         /*datos=new String[4];
         datos[0]=userInputPanel.getText();*/
 
