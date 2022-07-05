@@ -1,16 +1,13 @@
 package Guis;
 
-import Guis.Ventana;
 import Herramientas.CalculadoraBasica;
 import Herramientas.CalculadoraCientifica;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
-/**
- *
- */
 public class VentanaCalculadoraCientifica extends Ventana {
     private final JButton[] botonesNumeros = new JButton[10];
     private final ArrayList<JButton> botonesFunciones = new ArrayList<>();
